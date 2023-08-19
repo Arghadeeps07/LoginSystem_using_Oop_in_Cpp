@@ -7,14 +7,16 @@ class User{
     string password;
     bool Islogin = false;
 public:
-    User(string name,int age,string username,string password){
+    User(string name,int age,string username,string password)
+    {
         this->name = name;
         this->age = age;
         this->username = username;
         this->password = password;
     }
-    void login(string username,string password){
-        if(this->username == username && this->password == password){
+    void login(string username,string password) // This Function will help the user to login
+    {
+        if (this->username == username && this->password == password){
             cout << "Login successfully"<< endl;
             Islogin = true;
         }
@@ -22,18 +24,20 @@ public:
             cout << "Login unsuccessfully"<< endl;
 
     }
-    void logout(){
+    void logout()  // This Function will help the user to logout
+    {
         cout << "logout successfully"<< endl;
         Islogin = false;
     }
-    void showDetails(){
-        if(Islogin==true){
+    void showDetails() // This Function will show the details of the user 
+    {
+        if (Islogin==true){
         cout << "show name" << name << endl;
         cout << "show age" << age << endl;
         cout << "show username" << username << endl;
         }
         else
-            cout << "user is logged out"<< endl;
+            cout << "user is logged out" << endl;
     }
 
 };
